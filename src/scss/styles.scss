@@ -1,5 +1,5 @@
-@import "_variables";
 @import "_reset";
+@import "_variables";
 * {
   box-sizing: border-box;
 }
@@ -15,20 +15,18 @@ header {
   left: 0;
   width: $fixedWidth;
   height: 100%;
-  padding: 75px;
-  padding-right: 190px;
+  padding: 190px;
   padding: 10vh 0 72px 72px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: $red;
   h1 {
-    font-size: 75px;
+    font-size: 85px;
     width: 50%;
     text-transform: uppercase;
     letter-spacing: 5px;
   }
-
   h3 {
     font-size: 30px;
     font-weight: 300;
@@ -68,7 +66,44 @@ header {
 }
 
 main {
-  height: 5000vh;
-  background-color: $red;
   margin-left: $fixedWidth;
+  .movie {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 1%,
+        transparent,
+        transparent,
+        transparent,
+        transparent
+      )
+      $red;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    .wrapper {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      .movie__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        align-items: flex-end;
+      }
+      h4 {
+        font-size: 32px;
+        text-transform: uppercase;
+      }
+      h5 {
+        letter-spacing: 2px;
+      }
+    }
+    img {
+      width: 100%;
+      box-shadow: 0 80px 80px -80px #000, 0 0 12px rgba(0, 0, 0, 0.06),
+        inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+    }
+  }
 }
